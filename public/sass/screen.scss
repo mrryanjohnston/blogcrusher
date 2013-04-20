@@ -1,0 +1,55 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+@import "compass/reset";
+@import "compass/typography/vertical_rhythm";
+@import "font-stack";
+@include establish-baseline;
+
+body {
+  font-family: $helvetica-font-stack;
+  margin: 5px;
+  #post, #posts {
+    max-width: 500px;
+    margin: 0 auto;
+    .post {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px #ccc solid;
+    }
+  }
+}
+.code {
+  font-family: $monospace-font-stack;
+}
+
+#{headings()} {
+  color: #333;
+}
+
+h1 {
+  @include adjust-font-size-to(30px);
+  font-weight: 700;
+  &.sitename {
+    text-align: center;
+  }
+}
+h2 {
+  @include adjust-font-size-to(22px);
+  font-weight: 700;
+}
+h3 {
+  @include adjust-font-size-to(18px);
+}
+h4 {
+  @include adjust-font-size-to(16px);
+}
+p.authordate {
+  @include adjust-font-size-to(14px);
+  margin-bottom: 10px;
+}

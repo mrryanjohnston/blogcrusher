@@ -1,0 +1,4 @@
+node_modules/*
+posts/*
+public/.sass-cache/*
+public/images/*

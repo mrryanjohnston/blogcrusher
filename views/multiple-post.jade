@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  #posts
+    each post in posts
+      .post
+        h1.title
+          a(href='#{post.uri}')= post.title
+        p.authordate by #{post.author} on #{post.date}
+        != md(post.postcontent)

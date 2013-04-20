@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  #post
+    h1.title= title
+    p.authordate by #{author} on #{date}
+    != md(postcontent)
+    if (typeof previous != 'undefined')
+      .left 
+        a(href='#{previous}') Previous
+    if (typeof next != 'undefined')
+      .right 
+        a(href='#{next}') Next

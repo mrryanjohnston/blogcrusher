@@ -1,0 +1,11 @@
+doctype 5
+html
+  head
+    if typeof title !== 'undefined'
+      title #{sitename} - #{title}
+    else
+      title #{sitename}
+    link(rel='stylesheet', href='/stylesheets/screen.css')
+  body
+    include header
+    block content
